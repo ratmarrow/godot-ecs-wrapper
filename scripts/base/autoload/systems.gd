@@ -11,6 +11,7 @@ func _initialize_systems() -> void:
 	if systems_initialized == true: return
 	
 	# System instancing goes here.
+	add_child(System.new())
 	
 	systems_initialized = true
 	print("Systems initialized!")
