@@ -38,6 +38,8 @@ func query(archetype: Archetype) -> Array[int]:
 func add_component(component: String, entity: int, as_child_of_component: Node = null) -> Node:
 	var c = Components.instantiate_component_tree(component, as_child_of_component)
 	
+	if c == null: return null
+
 	c.name = str(entity) + "-" + component
 	_entities[entity][component] = c
 	entities_updated.emit()
