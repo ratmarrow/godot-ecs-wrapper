@@ -8,7 +8,7 @@ var _components : Dictionary[StringName, PackedScene] = {
 }
 
 func _ready() -> void:
-	_load_components("res://godot-ecs-wrapper/node_trees/components/")
+	_load_components("res://components/")
 
 # ANY file with the .tscn extension is gonna get sucked up by this function, so like...
 # don't put other things in the path besides what you intend to be components.
